@@ -1,23 +1,47 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function App() {
-  const [data, setData] = useState();
-  const [isLoading, setIsLoading] = useState(true);
+//mes 5 pages //
+import Home from "./pages/Home";
+import Offers from "./pages/Offers";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import NotFound from "./pages/NotFound";
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        "https://lereacteur-vinted-api.herokuapp.com/offers"
-      );
-      // ?? console.log(response.data);
-      setData(response.data);
-      setIsLoading(false);
-    };
-    fetchData();
-  }, []);
-  return isLoading ? <h1>Patieennnnnnnnnnnnce</h1> : <h1>helllo suzon</h1>;
+//mes 2 composants//
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import Cookies from "js-cookie";
+
+function App() {
+  const [token, setToken] = useState(Cookies.get("userToken") || null);
+
+  const setUser = (token) => {
+    if (token) {
+      Cookies.set("userToken", token, { expires: 10 });
+    } else {
+      Cookies.remove("userToken");
+    }
+
+    setToken(token);
+  };
+
+  return (
+    <Router>
+      <Header token={token} setUser={setUser} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/offer/:id" element={<Offers />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;

@@ -32,18 +32,24 @@ const Login = ({ setUser }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="email" onChange={(event) => setEmail(event.target.value)} />
-      <br />
-      <input
-        type="password"
-        onChange={(event) => setPassword(event.target.value)}
-      />
-      <br />
-      <input type="submit" value="Me connecter" />
-      <br />
-      <span>{errorMessage}</span>
-    </form>
+    <div className="seconnecter">
+      <div className="titreseconnecter">Se connecter</div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="email"
+          onChange={(event) => setEmail(event.target.value)}
+        />
+        <br />
+        <input
+          type="password"
+          onChange={(event) => setPassword(event.target.value)}
+        />
+        <br />
+        <input type="submit" value="Je me connecte" />
+        <br />
+        <span>{errorMessage}</span>
+      </form>
+    </div>
   );
 };
 

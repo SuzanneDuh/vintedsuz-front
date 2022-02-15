@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = ({ setUser }) => {
   const [username, setUsername] = useState("");
@@ -16,7 +16,7 @@ const Signup = ({ setUser }) => {
     try {
       event.preventDefault();
       const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/offers",
+        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
         {
           email: email,
           username: username,
@@ -32,40 +32,134 @@ const Signup = ({ setUser }) => {
       console.log("Signup Error ===> ", error.message);
       console.log("Catch error ===> ", error.response);
       if (error.response.status === 409) {
-        setErrorMessage("Attention. Cet email a déjà un compte associé");
+        setErrorMessage("Cet email a déjà un compte");
       }
     }
   };
+
+  //
+  //
+  //         <br />
+  //         <div className="checkboxnews">
+  //           <input
+  //             className="checkbox"
+  //             type="checkbox"
+  //             onChange={(event) => setNewsletter(event.target.checked)}
+  //           />{" "}
+  //           <span>S'inscrire à notre newsletter</span>
+  //         </div>
+  //         <br />
+  //         {/* <div className="enminscrivant">
+  //           <input
+  //             className="checkbox"
+  //             type="checkbox"
+  //             // onChange={(event) => setNewsletter(event.target.checked)}
+  //           />{" "}
+  //           <span>
+  //             En m'inscrivant, je confirme que j'ai accepté les{" "}
+  //             <span
+  //               onClick={() => {
+  //                 setUser(null);
+  //                 navigate("/termcond");
+  //               }}
+  //               className="abc"
+  //             >
+  //               Termes et conditions{" "}
+  //             </span>
+  //             et les{" "}
+  //             <span
+  //               onClick={() => {
+  //                 setUser(null);
+  //                 navigate("/conditv");
+  //               }}
+  //               className="abc"
+  //             >
+  //               Conditions de vente pro{" "}
+  //             </span>
+  //             de Vinted, avoir lu la{" "}
+  //             <span
+  //               onClick={() => {
+  //                 setUser(null);
+  //                 navigate("/confid");
+  //               }}
+  //               className="abc"
+  //             >
+  //               Politique de Confidentialité
+  //             </span>
+  //             , et que j'ai plus de 18 ans.
+  //           </span>
+  //         </div>
+  //         <br /> */}
+  //         <input className="jeminscris" type="submit" value="Je m'inscris" />
+  //         <span>{errorMessage}</span>
+  //       </form>
+  //     </div>
+  //   );
+  // };
 
   return (
     <div className="signup">
       <div className="titresinscrire">S'inscrire</div>
       <form onSubmit={handleSubmit}>
         <input
+          className="ab"
           type="text"
-          placeholder="Nom d'utilisateur"
+          placeholder="Mon nom d'utilisateur"
           onChange={(event) => setUsername(event.target.value)}
         />
         <br />
         <input
+          className="ab"
           type="email"
-          placeholder="Email"
+          placeholder="Mon email"
           onChange={(event) => setEmail(event.target.value)}
         />
         <br />
         <input
+          className="ab"
           type="password"
-          placeholder="Mot de passe"
+          placeholder="Mon mot de passe"
           onChange={(event) => setPassword(event.target.value)}
         />
         <br />
-        <input
-          type="checkbox"
-          onChange={(event) => setNewsletter(event.target.checked)}
-        />{" "}
-        <span>S'inscrire à notre newsletter</span>
+
+        <div>
+          <input
+            className="checkboxnews"
+            type="checkbox"
+            onChange={(event) => setNewsletter(event.target.checked)}
+          />
+          <span> M'inscrire à la newsletter</span>
+        </div>
+
         <br />
-        <input type="submit" value="S'inscrire" />
+        <div className="dede">
+          <input
+            className="enminscrivant"
+            type="checkbox"
+            onChange={(event) => setNewsletter(event.target.checked)}
+          />
+          <span>
+            {" "}
+            En m'inscrivant, je confirme que j'ai accepté les{" "}
+            <Link to="/Termecond" className="abc">
+              Termes et Conditions
+            </Link>{" "}
+            et les{" "}
+            <Link to="/Conditv" className="abc">
+              Conditions de vente pro de Vinted
+            </Link>
+            , avoir lu la{" "}
+            <Link to="/Confid" className="abc">
+              Politique de Confidentialité
+            </Link>{" "}
+            et que j'ai plus de 18 ans.
+          </span>
+        </div>
+
+        <br />
+        <input className="jeminscris" type="submit" value="Je m'inscris" />
+        <br />
         <span>{errorMessage}</span>
       </form>
     </div>

@@ -36,13 +36,15 @@ body {
   /* width: 00px; */
 }
 
-input[type="text"] {
+.rechart {
   background-color: rgb(247, 241, 241);
   border-color: rgb(244, 235, 235);
   width: 300px;
   padding: 12px 20px;
   margin: 8px 0;
   cursor: auto;
+  font-size: 15px;
+  border-radius: 10px;
 }
 
 .input {
@@ -150,7 +152,7 @@ input[type="text"] {
   height: 150px;
 }
 
-/* css de la page sign */
+/* css de la page s'inscrire */
 
 .signup {
   display: flex;
@@ -162,8 +164,44 @@ input[type="text"] {
 .titresinscrire {
   font-size: 30px;
   font-family: "Maison Neue", "Helvetica Neue", "Helvetica-Neue", "Arial";
+  color: #09b1ba;
+  margin-bottom: 20px;
 }
 
+.ab {
+  width: 300px;
+  height: 50px;
+  border: 0px;
+  border-bottom: 2px solid lightgrey;
+  font-size: 20px;
+}
+
+.checkbox {
+  size: 40px;
+}
+
+.checkboxnews {
+  margin-top: 20px;
+}
+
+.jeminscris {
+  background-color: #09b1ba;
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.abc {
+  color: #09b1ba;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.dede {
+  width: 300px;
+}
 /* css page */
 .page {
   display: flex;
@@ -180,6 +218,20 @@ button {
   cursor: pointer;
 }
 
+/* css page seconnecter */
+.seconnecter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titreseconnecter {
+  font-size: 30px;
+  font-family: "Maison Neue", "Helvetica Neue", "Helvetica-Neue", "Arial";
+  color: #09b1ba;
+}
+
 /* css du footer */
 
 .footer {
@@ -192,11 +244,7 @@ button {
   align-items: center;
 }
 
-.a,
-.b,
-.c,
-.d,
-.e {
+.a {
   color: grey;
   text-decoration: none;
 }

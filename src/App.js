@@ -52,7 +52,7 @@ function App() {
         <Route path="/offer/:id" element={<Offers />} />
         <Route path="/signup" element={<Signup setUser={setUser} />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
-        <Route path="/publish" element={<Publish />} />
+        <Route path="/publish" element={<Publish token={token} />} />
         <Route path="/confid" element={<Confid />} />
         <Route path="/pcookies" element={<Pcookies />} />
         <Route path="/termcond" element={<Termcond />} />

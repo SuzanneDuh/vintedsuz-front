@@ -6,16 +6,16 @@ const Footer = () => {
       <Link className="a" to="/confid">
         Politique de confidentialité
       </Link>
-      <Link className="b" to="/pcookies">
+      <Link className="a" to="/pcookies">
         Politique de cookies
       </Link>
-      <Link className="c" to="/termcond">
+      <Link className="a" to="/termcond">
         Termes et conditions
       </Link>
-      <Link className="d" to="/conditV">
+      <Link className="a" to="/conditV">
         Conditions de vente
       </Link>
-      <Link className="e" to="/conditUt">
+      <Link className="a" to="/conditUt">
         Conditions d'utilisation
       </Link>
     </div>

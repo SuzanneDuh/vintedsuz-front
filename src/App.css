@@ -62,16 +62,18 @@ input[type="text"] {
   margin-bottom: 20px;
   margin-left: 10px;
   border-radius: 10px;
-  width: 350px;
+  width: 390px;
 }
 
 .sinscrire {
   color: #09b1ba;
   cursor: pointer;
   /* border: 2px solid rgba(4, 215, 218, 0.777); */
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
   text-decoration: none;
+  border-right: 2px solid #09b1ba;
+  padding-right: 15px;
 }
 
 .seconnecter {
@@ -79,8 +81,8 @@ input[type="text"] {
   cursor: pointer;
   /* border: 2px solid rgba(4, 215, 218, 0.777); */
   text-decoration: none;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .vendslesarticles {
@@ -99,6 +101,8 @@ input[type="text"] {
   margin-bottom: 20px;
   border-radius: 10px;
   width: 200px;
+  /* pr enlever soulignement texte */
+  text-decoration: none;
 }
 
 .ptInt {
@@ -135,6 +139,13 @@ input[type="text"] {
   width: 400px;
 }
 
+/* .articletitle {
+  text-decoration: none; */
+/* border: 2px red solid;
+  color: black;
+  font-size: 20px;
+} */
+
 .articleimg {
   height: 150px;
 }
@@ -153,11 +164,52 @@ input[type="text"] {
   font-family: "Maison Neue", "Helvetica Neue", "Helvetica-Neue", "Arial";
 }
 
+/* css page */
+.page {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  color: #09b1ba;
+}
+
+button {
+  background-color: white;
+  color: #09b1ba;
+  border: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
 /* css du footer */
 
 .footer {
   height: 100px;
   background-color: white;
-  border: 2px #09b1ba solid;
+  /* border: 2px #09b1ba solid; */
   margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.a,
+.b,
+.c,
+.d,
+.e {
+  color: grey;
+  text-decoration: none;
+}
+
+/* divers */
+
+.patientez {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  font-size: 60px;
 }

@@ -23,7 +23,7 @@ const Home = () => {
   }, [page]);
 
   return isLoading ? (
-    <div>Patienteeeeezzzzz svp</div>
+    <div className="patientez">Patientez svp</div>
   ) : (
     <div>
       <Hero />
@@ -35,7 +35,7 @@ const Home = () => {
             return (
               <Link key={offer._id} to={`/offer/${offer._id}`}>
                 <div className="article">
-                  <h2>{offer.product_name}</h2>
+                  {/* <div className="articletitle">{offer.product_name}</div> */}
                   <img
                     classeName="articleimg"
                     src={offer.product_image.secure_url}
@@ -45,8 +45,14 @@ const Home = () => {
               </Link>
             );
           })}
-          <button onClick={() => setPage(page - 1)}>Page précédente</button>
-          <button onClick={() => setPage(page + 1)}>Page suivante</button>
+        </div>
+        <div className="page">
+          <button className="prec" onClick={() => setPage(page - 1)}>
+            Page précédente
+          </button>
+          <button className="voirpl" onClick={() => setPage(page + 1)}>
+            Voir plus
+          </button>
         </div>
       </div>
     </div>

@@ -1,0 +1,5 @@
+/* deplacement "smooth" */
+
+html {
+  scroll-behavior: smooth;
+}

@@ -42,9 +42,9 @@ const Header = ({ token, setUser }) => {
           Se connecter
         </Link>
       </div>
-      <buttun className="vendslesarticles" Link to="">
+      <Link className="vendslesarticles" to="/publish">
         Vends maintenant
-      </buttun>
+      </Link>
       <buttun className="ptInt" Link to="">
         ?
       </buttun>

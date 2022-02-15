@@ -20,7 +20,7 @@ const Offer = () => {
   }, [id]);
 
   return isLoading ? (
-    <div>Patienteeeeezzzzz svp</div>
+    <div>Patientez svp</div>
   ) : (
     <div>
       <h2>{data.product_name}</h2>

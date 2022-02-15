@@ -36,16 +36,18 @@ const Login = ({ setUser }) => {
       <div className="titreseconnecter">Se connecter</div>
       <form onSubmit={handleSubmit}>
         <input
+          className="ab"
           type="email"
           onChange={(event) => setEmail(event.target.value)}
         />
         <br />
         <input
+          className="ab"
           type="password"
           onChange={(event) => setPassword(event.target.value)}
         />
         <br />
-        <input type="submit" value="Je me connecte" />
+        <input className="d" type="submit" value="Je me connecte" />
         <br />
         <span>{errorMessage}</span>
       </form>

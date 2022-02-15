@@ -49,7 +49,7 @@ const Publish = ({ token }) => {
         }
       } else {
         setErrorMessage(
-          "Les champs Title, Price et Picture sont obligatoires !"
+          " Les champs Titre, Prix et Photos sont obligatoires !"
         );
       }
     } catch (error) {
@@ -80,7 +80,7 @@ const Publish = ({ token }) => {
       <br />
       <input
         type="text"
-        placeholder="title"
+        placeholder="Titre"
         onChange={(event) => setTitle(event.target.value)}
       />
       <br />
@@ -89,47 +89,47 @@ const Publish = ({ token }) => {
         id=""
         cols="30"
         rows="10"
-        placeholder="description"
+        placeholder="Description"
         onChange={(event) => setDescription(event.target.value)}
       />
       <br />
       <input
         type="text"
-        placeholder="brand"
+        placeholder="Marque"
         onChange={(event) => setBrand(event.target.value)}
       />
       <br />
       <input
         type="text"
-        placeholder="size"
+        placeholder="Taille"
         onChange={(event) => setSize(event.target.value)}
       />
       <br />
       <input
         type="text"
-        placeholder="color"
+        placeholder="Couleur"
         onChange={(event) => setColor(event.target.value)}
       />
       <br />
       <input
         type="text"
-        placeholder="condition"
+        placeholder="Etat"
         onChange={(event) => setCondition(event.target.value)}
       />
       <br />
       <input
         type="text"
-        placeholder="city"
+        placeholder="Ville"
         onChange={(event) => setCity(event.target.value)}
       />
       <br />
       <input
         type="number"
-        placeholder="price"
+        placeholder="Prix"
         onChange={(event) => setPrice(event.target.value)}
       />
       <br />
-      <input type="submit" />
+      <input value="Ajouter mon annonce" className="d" type="submit" />
       {errorMessage}
     </form>
   ) : (

@@ -37,66 +37,6 @@ const Signup = ({ setUser }) => {
     }
   };
 
-  //
-  //
-  //         <br />
-  //         <div className="checkboxnews">
-  //           <input
-  //             className="checkbox"
-  //             type="checkbox"
-  //             onChange={(event) => setNewsletter(event.target.checked)}
-  //           />{" "}
-  //           <span>S'inscrire à notre newsletter</span>
-  //         </div>
-  //         <br />
-  //         {/* <div className="enminscrivant">
-  //           <input
-  //             className="checkbox"
-  //             type="checkbox"
-  //             // onChange={(event) => setNewsletter(event.target.checked)}
-  //           />{" "}
-  //           <span>
-  //             En m'inscrivant, je confirme que j'ai accepté les{" "}
-  //             <span
-  //               onClick={() => {
-  //                 setUser(null);
-  //                 navigate("/termcond");
-  //               }}
-  //               className="abc"
-  //             >
-  //               Termes et conditions{" "}
-  //             </span>
-  //             et les{" "}
-  //             <span
-  //               onClick={() => {
-  //                 setUser(null);
-  //                 navigate("/conditv");
-  //               }}
-  //               className="abc"
-  //             >
-  //               Conditions de vente pro{" "}
-  //             </span>
-  //             de Vinted, avoir lu la{" "}
-  //             <span
-  //               onClick={() => {
-  //                 setUser(null);
-  //                 navigate("/confid");
-  //               }}
-  //               className="abc"
-  //             >
-  //               Politique de Confidentialité
-  //             </span>
-  //             , et que j'ai plus de 18 ans.
-  //           </span>
-  //         </div>
-  //         <br /> */}
-  //         <input className="jeminscris" type="submit" value="Je m'inscris" />
-  //         <span>{errorMessage}</span>
-  //       </form>
-  //     </div>
-  //   );
-  // };
-
   return (
     <div className="signup">
       <div className="titresinscrire">S'inscrire</div>
@@ -142,7 +82,7 @@ const Signup = ({ setUser }) => {
           <span>
             {" "}
             En m'inscrivant, je confirme que j'ai accepté les{" "}
-            <Link to="/Termecond" className="abc">
+            <Link to="/Termcond" className="abc">
               Termes et Conditions
             </Link>{" "}
             et les{" "}
@@ -158,7 +98,7 @@ const Signup = ({ setUser }) => {
         </div>
 
         <br />
-        <input className="jeminscris" type="submit" value="Je m'inscris" />
+        <input className="d" type="submit" value="Je m'inscris" />
         <br />
         <span>{errorMessage}</span>
       </form>

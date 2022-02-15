@@ -1,7 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;700&display=swap");
+
+body {
+  width: 1024px;
+  margin: 0 auto;
+  font-family: "montserrat";
+  /* font-family: "Maison Neue", "Helvetica Neue", "Helvetica-Neue", "Arial"; */
+}
+
+/* Css Du Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logovinted {
+  width: 120px;
+  cursor: pointer;
+  /* border: 2px solid rgba(4, 215, 218, 0.777); */
+}
+
+.loupe {
+  font-size: 40px;
+  /* border: 2px solid red; */
+}
+
+.loupeetforme {
+  display: flex;
+  align-items: center;
+}
+
+.rechercherdesarticles {
+  display: flex;
+  align-items: center;
+  /* width: 00px; */
+}
+
+input[type="text"] {
+  background-color: rgb(247, 241, 241);
+  border-color: rgb(244, 235, 235);
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  cursor: auto;
+}
+
+.input {
+  font-size: 20px;
+}
+
+.sinscrireseconnecter {
+  color: #09b1ba;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #09b1ba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  width: 350px;
+}
+
+.sinscrire {
+  color: #09b1ba;
+  cursor: pointer;
+  /* border: 2px solid rgba(4, 215, 218, 0.777); */
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.seconnecter {
+  color: #09b1ba;
+  cursor: pointer;
+  /* border: 2px solid rgba(4, 215, 218, 0.777); */
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.vendslesarticles {
+  color: white;
+  background-color: #09b1ba;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #09b1ba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.ptInt {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Fr {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* CSS Hero */
+
+.imagehero {
+  width: 1024px;
+}
+
+/* CssDesArticles sur la Home page*/
+
+.Articlespopulaires {
+  font-size: 30px;
+  font-family: "Maison Neue", "Helvetica Neue", "Helvetica-Neue", "Arial";
+}
+
+.carroussel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 .article {
   width: 400px;
 }
 
 .articleimg {
   height: 150px;
+}
+
+/* css de la page sign */
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titresinscrire {
+  font-size: 30px;
+  font-family: "Maison Neue", "Helvetica Neue", "Helvetica-Neue", "Arial";
+}
+
+/* css du footer */
+
+.footer {
+  height: 100px;
+  background-color: white;
+  border: 2px #09b1ba solid;
+  margin-top: 30px;
 }

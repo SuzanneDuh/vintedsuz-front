@@ -38,30 +38,32 @@ const Signup = ({ setUser }) => {
   };
 
   return (
-    <div>
+    <div className="signup">
+      <div className="titresinscrire">S'inscrire</div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="username"
+          placeholder="Nom d'utilisateur"
           onChange={(event) => setUsername(event.target.value)}
         />
         <br />
         <input
           type="email"
-          placeholder="email"
+          placeholder="Email"
           onChange={(event) => setEmail(event.target.value)}
         />
         <br />
         <input
           type="password"
-          placeholder="password"
+          placeholder="Mot de passe"
           onChange={(event) => setPassword(event.target.value)}
         />
         <br />
         <input
           type="checkbox"
           onChange={(event) => setNewsletter(event.target.checked)}
-        />
+        />{" "}
+        <span>S'inscrire à notre newsletter</span>
         <br />
         <input type="submit" value="S'inscrire" />
         <span>{errorMessage}</span>

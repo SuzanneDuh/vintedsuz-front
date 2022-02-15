@@ -267,3 +267,34 @@ button {
 .error {
   font-size: 60px;
 }
+
+/* publish */
+.publish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo {
+  height: 45;
+  width: 180;
+  border: 2px #09b1ba solid;
+  color: #09b1ba;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.e {
+  height: 30px;
+  width: 300px;
+  border: 2px lightgrey solid;
+}
+
+.f {
+  width: 300px;
+}

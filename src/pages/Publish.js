@@ -58,80 +58,92 @@ const Publish = ({ token }) => {
   };
 
   return token ? (
-    <form style={{ padding: 30 }} onSubmit={handleSubmit}>
-      <div>
-        <div style={{ height: 45, width: 180, border: "1px solid blue" }}>
-          <label htmlFor="file">
-            <span>+</span> <span>Ajouter une photo</span>
-          </label>
+    <div className="publish">
+      <div className="titresinscrire">Vends ton article</div>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <div className="photo">
+            <label htmlFor="file">
+              <span> + </span> <span>Ajoute une photo de ton article</span>
+            </label>
+          </div>
+          <input
+            className="file"
+            style={{ display: "none" }}
+            id="file"
+            type="file"
+            onChange={(event) => {
+              setPicture(event.target.files[0]);
+              setPreview(URL.createObjectURL(event.target.files[0]));
+            }}
+          />
         </div>
-        <input
-          style={{ display: "none" }}
-          id="file"
-          type="file"
-          onChange={(event) => {
-            setPicture(event.target.files[0]);
-            setPreview(URL.createObjectURL(event.target.files[0]));
-          }}
-        />
-      </div>
-      {preview && <img src={preview} alt="" />}
+        {preview && <img src={preview} alt="" />}
 
-      <br />
-      <input
-        type="text"
-        placeholder="Titre"
-        onChange={(event) => setTitle(event.target.value)}
-      />
-      <br />
-      <textarea
-        name=""
-        id=""
-        cols="30"
-        rows="10"
-        placeholder="Description"
-        onChange={(event) => setDescription(event.target.value)}
-      />
-      <br />
-      <input
-        type="text"
-        placeholder="Marque"
-        onChange={(event) => setBrand(event.target.value)}
-      />
-      <br />
-      <input
-        type="text"
-        placeholder="Taille"
-        onChange={(event) => setSize(event.target.value)}
-      />
-      <br />
-      <input
-        type="text"
-        placeholder="Couleur"
-        onChange={(event) => setColor(event.target.value)}
-      />
-      <br />
-      <input
-        type="text"
-        placeholder="Etat"
-        onChange={(event) => setCondition(event.target.value)}
-      />
-      <br />
-      <input
-        type="text"
-        placeholder="Ville"
-        onChange={(event) => setCity(event.target.value)}
-      />
-      <br />
-      <input
-        type="number"
-        placeholder="Prix"
-        onChange={(event) => setPrice(event.target.value)}
-      />
-      <br />
-      <input value="Ajouter mon annonce" className="d" type="submit" />
-      {errorMessage}
-    </form>
+        <br />
+        <input
+          className="e"
+          type="text"
+          placeholder="Titre"
+          onChange={(event) => setTitle(event.target.value)}
+        />
+        <br />
+        <textarea
+          className="f"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Description"
+          onChange={(event) => setDescription(event.target.value)}
+        />
+        <br />
+        <input
+          className="e"
+          type="text"
+          placeholder="Marque"
+          onChange={(event) => setBrand(event.target.value)}
+        />
+        <br />
+        <input
+          className="e"
+          type="text"
+          placeholder="Taille"
+          onChange={(event) => setSize(event.target.value)}
+        />
+        <br />
+        <input
+          className="e"
+          type="text"
+          placeholder="Couleur"
+          onChange={(event) => setColor(event.target.value)}
+        />
+        <br />
+        <input
+          className="e"
+          type="text"
+          placeholder="Etat"
+          onChange={(event) => setCondition(event.target.value)}
+        />
+        <br />
+        <input
+          className="e"
+          type="text"
+          placeholder="Ville"
+          onChange={(event) => setCity(event.target.value)}
+        />
+        <br />
+        <input
+          className="e"
+          type="number"
+          placeholder="Prix"
+          onChange={(event) => setPrice(event.target.value)}
+        />
+        <br />
+        <input value="Ajouter mon annonce" className="d" type="submit" />
+        {errorMessage}
+      </form>
+    </div>
   ) : (
     <Navigate to="/login" />
   );

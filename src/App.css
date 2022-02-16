@@ -383,7 +383,6 @@ img .articleeimg {
 .price {
   font-size: 30px;
   display: flex;
-  justify-content: start;
   color: black;
   margin-bottom: 25px;
   padding-top: 20px;

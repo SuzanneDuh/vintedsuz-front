@@ -33,7 +33,11 @@ const Home = () => {
         <div className="carroussel">
           {data.offers.map((offer) => {
             return (
-              <Link key={offer._id} to={`/offer/${offer._id}`}>
+              <Link
+                className="article"
+                key={offer._id}
+                to={`/offer/${offer._id}`}
+              >
                 <div className="article">
                   {/* <div className="articletitle">{offer.product_name}</div> */}
                   <img
@@ -41,6 +45,8 @@ const Home = () => {
                     src={offer.product_image.secure_url}
                     alt=""
                   />
+                  <div className="pp">{offer.product_price} € </div>
+                  <div className="ptm">{offer.product_name} </div>
                 </div>
               </Link>
             );

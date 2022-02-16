@@ -58,9 +58,9 @@ const Publish = ({ token }) => {
   };
 
   return token ? (
-    <div className="publish">
+    <div>
       <div className="titresinscrire">Vends ton article</div>
-      <form onSubmit={handleSubmit}>
+      <form className="publish" onSubmit={handleSubmit}>
         <div>
           <div className="photo">
             <label htmlFor="file">
@@ -81,6 +81,7 @@ const Publish = ({ token }) => {
         {preview && <img src={preview} alt="" />}
 
         <br />
+
         <input
           className="e"
           type="text"

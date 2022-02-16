@@ -24,6 +24,8 @@ import Conditut from "./pages/Conditut";
 import Termcond from "./pages/Termcond";
 import Conditv from "./pages/Conditv";
 
+import Pay from "./pages/Pay";
+
 //fontawesome
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -58,6 +60,7 @@ function App() {
         <Route path="/termcond" element={<Termcond />} />
         <Route path="/conditv" element={<Conditv />} />
         <Route path="/conditut" element={<Conditut />} />
+        <Route path="/pay" element={<Pay />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>
